@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airtel Secure - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0f1a] min-h-screen flex items-center justify-center">
+    <div class="bg-[#111827] p-10 rounded-2xl shadow-lg w-full max-w-md text-white">
+        <!-- Airtel Secure Logo -->
+        <div class="flex flex-col items-center mb-6">
+            <img src="{{ url_for('static', filename='images/airtel_secure_white.png') }}" alt="Airtel Secure" class="h-12 mb-2">
+            <h2 class="text-2xl font-semibold tracking-wide">Threat Intel Platform</h2>
+        </div>
+
+        <!-- Flash Message -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="mb-4">
+              {% for category, message in messages %}
+                <div class="bg-red-500 text-white text-sm font-medium px-4 py-2 rounded-md">
+                    {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <!-- Login Form -->
+        <form method="POST" action="{{ url_for('main.login') }}" class="space-y-4">
+            <div>
+                <label class="block text-sm mb-1">Username</label>
+                <input type="text" name="username" placeholder="Enter username" required
+                    class="w-full px-4 py-2 rounded-md bg-[#1f2937] text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+            </div>
+
+            <div>
+                <label class="block text-sm mb-1">Password</label>
+                <input type="password" name="password" placeholder="Enter password" required
+                    class="w-full px-4 py-2 rounded-md bg-[#1f2937] text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-md transition duration-200">
+                Log In
+            </button>
+        </form>
+    </div>
+</body>
+</html>

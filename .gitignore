@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+
+# Logs
+*.log
+fetch_log*
+tasklog*
+
+# Temporary files
+tempCodeRunnerFile.py
+
+# VS Code
+.vscode/
+
+# Database / secrets
+instance/
+config.py
+secrets.py
+
+# OS files
+.DS_Store
+Thumbs.db

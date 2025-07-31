@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Threat Intelligence Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script defer src="/static/js/dashboard.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="container mx-auto px-4 py-6">
+    <h1 class="text-3xl font-bold mb-6 text-red-500">Threat Intelligence Dashboard</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
+      <!-- Summary Card -->
+      <div class="bg-gray-800 p-3 rounded-xl shadow h-48">
+        <h2 class="text-lg font-semibold mb-2 text-red-400">Threat Summary</h2>
+        <ul id="summaryStats" class="space-y-1 text-sm text-white">
+          <li>Total IPs: <span id="totalIPs" class="font-bold text-red-300">...</span></li>
+          <li>Countries Involved: <span id="totalCountries" class="font-bold text-red-300">...</span></li>
+          <li>Unique ISPs: <span id="totalISPs" class="font-bold text-red-300">...</span></li>
+          <li>Last Update: <span id="lastSeen" class="font-bold text-red-300">...</span></li>
+        </ul>
+      </div>
+
+      <!-- Abuse Category Doughnut Chart -->
+      <div class="bg-gray-800 p-3 rounded-xl shadow h-48">
+        <h2 class="text-lg font-semibold mb-2 text-red-400">Top Abuse Categories</h2>
+        <canvas id="categoryChart" class="w-full h-32"></canvas>
+      </div>
+
+      <!-- Country Bar Chart -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 text-red-400">Top Countries (by Threats)</h2>
+        <canvas id="countryChart" class="w-full h-60"></canvas>
+      </div>
+
+      <!-- Daily Trend Chart -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 text-red-400">Daily Threat Trend</h2>
+        <canvas id="trendChart" class="w-full h-60"></canvas>
+      </div>
+
+      <!-- Map -->
+      <div class="col-span-1 md:col-span-2 bg-gray-800 p-4 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 text-red-400">Threat IP Distribution Map</h2>
+        <div id="threatMap" class="w-full h-96 rounded-lg z-10"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

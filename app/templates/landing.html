@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Airtel Threat Intelligence Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f172a] text-white font-sans">
+
+  <div class="flex min-h-screen">
+
+    <!-- Left Sidebar -->
+    <div class="w-64 bg-[#1e293b] flex flex-col items-center py-10 px-4 shadow-lg border-r border-red-700">
+      <!-- Airtel Logo -->
+      <img src="{{ url_for('static', filename='images/airtel_white_logo.png') }}"
+           alt="Airtel Logo"
+           class="w-16 mb-6">
+
+      <!-- Logged in Box -->
+      <div class="bg-[#334155] text-white text-center p-4 rounded-lg w-full text-sm shadow">
+        <p class="text-gray-300">Logged in as</p>
+        <p class="text-lg font-semibold mt-1">{{ current_user.username }}</p>
+      </div>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="flex-1 flex flex-col items-center justify-center px-6">
+      <!-- Welcome Title -->
+      <h1 class="text-4xl font-bold mb-4 text-white">Welcome to Airtel Threat Intelligence</h1>
+      <p class="text-gray-300 mb-10 text-center text-lg max-w-xl">
+        Access real-time threat feeds, incident reports, and secure dashboards tailored for Airtel's cybersecurity operations.
+      </p>
+
+      <!-- Action Boxes -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
+        <!-- Dashboard -->
+        <a href="{{ url_for('main.dashboard') }}"
+           class="bg-red-600 hover:bg-red-500 transition text-white font-semibold p-6 rounded-xl text-center shadow-lg">
+            Dashboard
+        </a>
+
+        <!-- Threat Feed -->
+        <a href="#"
+           class="bg-red-600 hover:bg-red-500 transition text-white font-semibold p-6 rounded-xl text-center shadow-lg">
+            Threat Feed
+        </a>
+
+        <!-- Incident Reports -->
+        <a href="#"
+           class="bg-red-600 hover:bg-red-500 transition text-white font-semibold p-6 rounded-xl text-center shadow-lg">
+             Incident Reports
+        </a>
+
+        <!-- Contact Us -->
+        <a href="#"
+           class="bg-red-600 hover:bg-red-500 transition text-white font-semibold p-6 rounded-xl text-center shadow-lg">
+             Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
