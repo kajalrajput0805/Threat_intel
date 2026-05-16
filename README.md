@@ -19,20 +19,20 @@ A full-stack Cyber Threat Intelligence Dashboard built using Flask, PostgreSQL, 
 
 
 *Backend
-Python
-Flask
-Flask-SQLAlchemy
-Flask-Login
+Python,
+Flask,
+Flask-SQLAlchemy,
+Flask-Login,
 PostgreSQL
 
 
 *Frontend
-HTML5
-CSS3
-JavaScript
-Chart.js
-leaflet.js
-Leaflet.js
+HTML5,
+CSS3,
+JavaScript,
+Chart.js,
+leaflet.js,
+Leaflet.js,
 
 
 *Database
