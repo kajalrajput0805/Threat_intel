@@ -15,12 +15,17 @@ A full-stack Cyber Threat Intelligence Dashboard built using Flask, PostgreSQL, 
 
 
 #Tech Stack
+
+
+
 *Backend
 Python
 Flask
 Flask-SQLAlchemy
 Flask-Login
 PostgreSQL
+
+
 *Frontend
 HTML5
 CSS3
@@ -28,6 +33,8 @@ JavaScript
 Chart.js
 leaflet.js
 Leaflet.js
+
+
 *Database
 PostgreSQL
 
