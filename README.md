@@ -33,33 +33,4 @@ PostgreSQL
 
 
 
-
-THREAT_SITE/
-│
-├── app/
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   ├── js/
-│   │   │   └── dashboard.js
-│   │
-│   ├── templates/
-│   │   ├── dashboard.html
-│   │   ├── home.html
-│   │   ├── landing.html
-│   │   └── login.html
-│   │
-│   ├── __init__.py
-│   ├── database.py
-│   ├── extension.py
-│   ├── models.py
-│   └── routes.py
-│
-├── create_client_user.py
-├── create_user.py
-├── fetch_and_store_ips.py
-├── requirements.txt
-├── run.py
-└── README.md
-
 *This project is for educational and research purposes.
